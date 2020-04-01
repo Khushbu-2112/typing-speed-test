@@ -1,0 +1,96 @@
+*{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+box-sizing: border-box;
+}
+
+.data{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+h2{
+    font-family: cursive;
+    color: rebeccapurple;
+}
+
+p{
+    color: lightslategray;
+}
+
+.box{
+    color: white;
+    /* position: absolute; */
+    background: royalblue;
+    height: 400px;
+    width: 700px;
+    /* margin: 0 auto; */
+    border-radius:8px ;
+    padding: 5%;
+    font-size: 2vw;
+    overflow-y: scroll;
+    overflow-x: hidden !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    box-shadow: 0px 0px 6px lightslategrey;
+}
+
+.inner{
+  background-color: lightskyblue;
+  color: blue;
+  font-size: 4vh;
+}
+
+.result{
+  height: 30%;
+  padding: 2%;
+  background-color: #f2f2f2;
+  width: 20%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#wpm{
+  /* display: none; */
+  margin: 0  5%;
+  color: orange;
+  font-size: 3vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: lightgray;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: orangered;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  ::selection {
+    background: orangered;
+    color: white;
+  }
