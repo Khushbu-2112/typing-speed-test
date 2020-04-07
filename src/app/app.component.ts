@@ -24,18 +24,18 @@ export class AppComponent  implements OnInit{
 
   generateStr(length:number,level?:number):string{
     var result = '';
-    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@., "%_-';
+    var characters = 'abcdefghijklmnopqrstuvwxyz0123456789@., "%_-';
     switch(level){
       case 1:{
         var characters = 'abcdefghijklmnopqrstuvwxyz 0123456789';
         break;
       }
       case 2:{
-        var characters = 'ABCDEFKLMNOPRSTUabcdefghijklmnopqrstuvwxyz 0123456789';
+        var characters = 'abcdefghijklmnopqrstuvwxyz 0123456789';
         break;
       }
     }
-    
+
     let charactersLength = characters.length;
     for ( let i = 0; i < length; i++ ) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -99,13 +99,13 @@ export class AppComponent  implements OnInit{
   typedstr$ = fromEvent(document, 'keydown')
   .pipe(
     takeUntil(this.stoptyping$),
-    map((e: KeyboardEvent) =>{ 
+    map((e: KeyboardEvent) =>{
       this.keyip = e.key;
       this.arrtyped.push(this.keyip);
       //console.log(this.keyip);
       //console.log('typed',this.keyip);
       //console.log(this.arrgiven[this.loopi]);
-      
+
       if(this.keyip === this.arrgiven[this.loopi])
       {
         this.loopi++;
@@ -128,7 +128,7 @@ export class AppComponent  implements OnInit{
     this.netspeedwpm = this.speedwpm - Math.ceil(this.incorrect/5);
     if(this.netspeedwpm<0)
       this.netspeedwpm = 0;
-  } //end 
+  } //end
 
   // handle start btn click event
   startTyping(event)
